@@ -1,0 +1,20 @@
+{
+ "columns": [
+  "z_flow",
+  "rollmean_z_flow",
+  "rollstd_z_flow",
+  "delta_z_flow",
+  "z_pressure",
+  "rollmean_z_pressure",
+  "rollstd_z_pressure",
+  "delta_z_pressure",
+  "window_missing_fraction"
+ ],
+ "n_estimators": 200,
+ "n_train": 5760,
+ "orientation": "higher_is_more_anomalous",
+ "seed": 42,
+ "sha256": "9631d692a3d462ad6833302ed1ae64585367195f8d059b54f27f49c6eb90f6ef",
+ "sklearn_version": "1.7.2",
+ "version": "iforest-v1"
+}

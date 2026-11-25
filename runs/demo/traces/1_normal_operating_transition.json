@@ -1,0 +1,524 @@
+{
+ "annotation_note": "scenario fields below are evaluation annotations; detectors never receive them",
+ "clock": "data clock (UTC timestamps of the input files). No review wall-clock time exists.",
+ "detectors": {
+  "iforest": {
+   "cases": [
+    {
+     "alert_ts": "2026-01-13T07:55:00Z",
+     "asset_id": "TANK-02",
+     "bayes_version": "bayes-example-v1",
+     "case_id": "CASE-ede9f6ac1c41",
+     "context": {
+      "corroborated_by_other_asset": false,
+      "criticality": "low",
+      "maintenance_window_id": null
+     },
+     "corroborating_evidence_ids": [],
+     "created_at": "2026-01-13T07:55:00Z",
+     "detector_version": "iforest-v1",
+     "evidence_ids": [
+      "TANK-02@2026-01-13T07:55:00Z",
+      "TANK-02@2026-01-13T08:05:00Z"
+     ],
+     "first_evidence_ts": "2026-01-13T07:55:00Z",
+     "inferred": {
+      "concern_posterior": 0.5529953917050691,
+      "meaning": "triage-priority index; does not establish cause or intent",
+      "provenance": "expert-specified example probabilities; not learned; not from the article"
+     },
+     "kind": "detection",
+     "observed": {
+      "peak_abs_z_by_sensor": {
+       "flow": 3.123407381631598,
+       "pressure": 1.9193540033925307
+      },
+      "window_missing_fraction_max": 0.0
+     },
+     "peak_score": 0.5821394357898781,
+     "reason": "detector score at or above the budget threshold on 2 consecutive-ish observation(s)",
+     "recommended_action": "review_requested",
+     "review": {
+      "decided_at": "2026-01-13T08:55:00Z",
+      "decision": "observation_continued",
+      "note": "expected operating transition; keep observing",
+      "review_latency_min": 60.0,
+      "reviewer_id": "analyst-01 (simulated, fictional)",
+      "valid": true
+     }
+    },
+    {
+     "alert_ts": "2026-01-13T14:30:00Z",
+     "asset_id": "TANK-02",
+     "bayes_version": "bayes-example-v1",
+     "case_id": "CASE-cbaa9989244c",
+     "context": {
+      "corroborated_by_other_asset": false,
+      "criticality": "low",
+      "maintenance_window_id": null
+     },
+     "corroborating_evidence_ids": [],
+     "created_at": "2026-01-13T14:30:00Z",
+     "detector_version": "iforest-v1",
+     "evidence_ids": [
+      "TANK-02@2026-01-13T14:30:00Z"
+     ],
+     "first_evidence_ts": "2026-01-13T14:30:00Z",
+     "inferred": {
+      "concern_posterior": 0.5529953917050691,
+      "meaning": "triage-priority index; does not establish cause or intent",
+      "provenance": "expert-specified example probabilities; not learned; not from the article"
+     },
+     "kind": "detection",
+     "observed": {
+      "peak_abs_z_by_sensor": {
+       "flow": 0.9102912080693344,
+       "pressure": 1.9844844068961731
+      },
+      "window_missing_fraction_max": 0.0
+     },
+     "peak_score": 0.5973229579733684,
+     "reason": "detector score at or above the budget threshold on 1 consecutive-ish observation(s)",
+     "recommended_action": "review_requested",
+     "review": {
+      "decided_at": "2026-01-13T08:55:00Z",
+      "decision": "observation_continued",
+      "note": "expected operating transition; keep observing",
+      "review_latency_min": null,
+      "reviewer_id": "analyst-01 (simulated, fictional)",
+      "valid": false
+     }
+    }
+   ],
+   "outcome": "alert_and_case",
+   "peak_score_in_window": 0.5973229579733684,
+   "rows_at_or_above_threshold": 3,
+   "threshold": 0.5687744979936368,
+   "timeline": [
+    {
+     "alert_ts": "2026-01-13T07:55:00Z",
+     "case_created_at": "2026-01-13T07:55:00Z",
+     "case_id": "CASE-ede9f6ac1c41",
+     "first_evidence_ts": "2026-01-13T07:55:00Z",
+     "review_decided_at": "2026-01-13T08:55:00Z",
+     "review_latency_min": 60.0
+    },
+    {
+     "alert_ts": "2026-01-13T14:30:00Z",
+     "case_created_at": "2026-01-13T14:30:00Z",
+     "case_id": "CASE-cbaa9989244c",
+     "first_evidence_ts": "2026-01-13T14:30:00Z",
+     "review_decided_at": "2026-01-13T08:55:00Z",
+     "review_latency_min": null
+    }
+   ]
+  },
+  "rule": {
+   "cases": [
+    {
+     "alert_ts": "2026-01-13T07:55:00Z",
+     "asset_id": "TANK-02",
+     "bayes_version": "bayes-example-v1",
+     "case_id": "CASE-d457af7f4bce",
+     "context": {
+      "corroborated_by_other_asset": false,
+      "criticality": "low",
+      "maintenance_window_id": null
+     },
+     "corroborating_evidence_ids": [],
+     "created_at": "2026-01-13T07:55:00Z",
+     "detector_version": "rule-v1",
+     "evidence_ids": [
+      "TANK-02@2026-01-13T07:55:00Z"
+     ],
+     "first_evidence_ts": "2026-01-13T07:55:00Z",
+     "inferred": {
+      "concern_posterior": 0.5529953917050691,
+      "meaning": "triage-priority index; does not establish cause or intent",
+      "provenance": "expert-specified example probabilities; not learned; not from the article"
+     },
+     "kind": "detection",
+     "observed": {
+      "peak_abs_z_by_sensor": {
+       "flow": 2.7015915070562984,
+       "pressure": 1.9193540033925307
+      },
+      "window_missing_fraction_max": 0.0
+     },
+     "peak_score": 2.7015915070562984,
+     "reason": "detector score at or above the budget threshold on 1 consecutive-ish observation(s)",
+     "recommended_action": "review_requested",
+     "review": {
+      "decided_at": "2026-01-13T08:55:00Z",
+      "decision": "observation_continued",
+      "note": "expected operating transition; keep observing",
+      "review_latency_min": 60.0,
+      "reviewer_id": "analyst-01 (simulated, fictional)",
+      "valid": true
+     }
+    },
+    {
+     "alert_ts": "2026-01-13T10:05:00Z",
+     "asset_id": "TANK-02",
+     "bayes_version": "bayes-example-v1",
+     "case_id": "CASE-fffea792bb9c",
+     "context": {
+      "corroborated_by_other_asset": true,
+      "criticality": "low",
+      "maintenance_window_id": null
+     },
+     "corroborating_evidence_ids": [
+      "VALVE-03@2026-01-13T09:55:00Z"
+     ],
+     "created_at": "2026-01-13T10:05:00Z",
+     "detector_version": "rule-v1",
+     "evidence_ids": [
+      "TANK-02@2026-01-13T10:05:00Z",
+      "TANK-02@2026-01-13T10:10:00Z",
+      "TANK-02@2026-01-13T10:15:00Z",
+      "TANK-02@2026-01-13T10:20:00Z",
+      "TANK-02@2026-01-13T10:25:00Z"
+     ],
+     "first_evidence_ts": "2026-01-13T10:05:00Z",
+     "inferred": {
+      "concern_posterior": 0.9836065573770492,
+      "meaning": "triage-priority index; does not establish cause or intent",
+      "provenance": "expert-specified example probabilities; not learned; not from the article"
+     },
+     "kind": "detection",
+     "observed": {
+      "peak_abs_z_by_sensor": {
+       "flow": 2.886323518530378,
+       "pressure": 0.5475754631264086
+      },
+      "window_missing_fraction_max": 0.0
+     },
+     "peak_score": 2.8646491850541778,
+     "reason": "detector score at or above the budget threshold on 5 consecutive-ish observation(s)",
+     "recommended_action": "review_requested",
+     "review": {
+      "decided_at": "2026-01-13T08:55:00Z",
+      "decision": "observation_continued",
+      "note": "expected operating transition; keep observing",
+      "review_latency_min": null,
+      "reviewer_id": "analyst-01 (simulated, fictional)",
+      "valid": false
+     }
+    }
+   ],
+   "outcome": "alert_and_case",
+   "peak_score_in_window": 2.8646491850541778,
+   "rows_at_or_above_threshold": 6,
+   "threshold": 2.4251603924136687,
+   "timeline": [
+    {
+     "alert_ts": "2026-01-13T07:55:00Z",
+     "case_created_at": "2026-01-13T07:55:00Z",
+     "case_id": "CASE-d457af7f4bce",
+     "first_evidence_ts": "2026-01-13T07:55:00Z",
+     "review_decided_at": "2026-01-13T08:55:00Z",
+     "review_latency_min": 60.0
+    },
+    {
+     "alert_ts": "2026-01-13T10:05:00Z",
+     "case_created_at": "2026-01-13T10:05:00Z",
+     "case_id": "CASE-fffea792bb9c",
+     "first_evidence_ts": "2026-01-13T10:05:00Z",
+     "review_decided_at": "2026-01-13T08:55:00Z",
+     "review_latency_min": null
+    }
+   ]
+  }
+ },
+ "example": "1_normal_operating_transition",
+ "expected_rows_in_window": 184,
+ "recorded_observation_count_in_window": 184,
+ "recorded_observations_sample": [
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T07:00:00Z",
+   "value": 102.941
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T07:20:00Z",
+   "value": 106.606
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T07:40:00Z",
+   "value": 105.788
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T08:00:00Z",
+   "value": 107.22
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T08:20:00Z",
+   "value": 107.249
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T08:40:00Z",
+   "value": 105.333
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T09:00:00Z",
+   "value": 107.769
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T09:20:00Z",
+   "value": 105.348
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T09:40:00Z",
+   "value": 107.092
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T10:00:00Z",
+   "value": 109.917
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T10:20:00Z",
+   "value": 108.847
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T10:40:00Z",
+   "value": 104.766
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T11:00:00Z",
+   "value": 104.988
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T11:20:00Z",
+   "value": 100.817
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T11:40:00Z",
+   "value": 101.326
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T12:00:00Z",
+   "value": 104.98
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T12:20:00Z",
+   "value": 103.525
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T12:40:00Z",
+   "value": 103.671
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T13:00:00Z",
+   "value": 104.717
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T13:20:00Z",
+   "value": 104.329
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T13:40:00Z",
+   "value": 102.328
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T14:00:00Z",
+   "value": 103.153
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T14:20:00Z",
+   "value": 101.617
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T07:00:00Z",
+   "value": 48.516
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T07:20:00Z",
+   "value": 47.812
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T07:40:00Z",
+   "value": 47.319
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T08:00:00Z",
+   "value": 47.398
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T08:20:00Z",
+   "value": 48.014
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T08:40:00Z",
+   "value": 49.252
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T09:00:00Z",
+   "value": 49.995
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T09:20:00Z",
+   "value": 48.332
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T09:40:00Z",
+   "value": 48.666
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T10:00:00Z",
+   "value": 49.518
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T10:20:00Z",
+   "value": 50.344
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T10:40:00Z",
+   "value": 48.203
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T11:00:00Z",
+   "value": 48.68
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T11:20:00Z",
+   "value": 50.558
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T11:40:00Z",
+   "value": 50.484
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T12:00:00Z",
+   "value": 51.446
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T12:20:00Z",
+   "value": 49.907
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T12:40:00Z",
+   "value": 49.08
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T13:00:00Z",
+   "value": 50.776
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T13:20:00Z",
+   "value": 50.777
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T13:40:00Z",
+   "value": 49.485
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T14:00:00Z",
+   "value": 46.794
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T14:20:00Z",
+   "value": 51.321
+  }
+ ],
+ "scenario": {
+  "assets": [
+   "TANK-02"
+  ],
+  "end": "2026-01-13T14:05:00Z",
+  "kind": "normal_transition",
+  "scenario_id": "S-T2",
+  "start": "2026-01-13T07:10:00Z"
+ },
+ "why_chosen": "expected setpoint-style transition; may or may not alert"
+}

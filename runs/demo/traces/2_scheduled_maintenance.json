@@ -1,0 +1,667 @@
+{
+ "annotation_note": "scenario fields below are evaluation annotations; detectors never receive them",
+ "clock": "data clock (UTC timestamps of the input files). No review wall-clock time exists.",
+ "detectors": {
+  "iforest": {
+   "cases": [
+    {
+     "alert_ts": "2026-01-14T12:00:00Z",
+     "asset_id": "PUMP-01",
+     "bayes_version": "bayes-example-v1",
+     "case_id": "CASE-6a23444795a5",
+     "context": {
+      "corroborated_by_other_asset": false,
+      "criticality": "high",
+      "maintenance_window_id": "MW-1"
+     },
+     "corroborating_evidence_ids": [],
+     "created_at": "2026-01-14T12:00:00Z",
+     "detector_version": "iforest-v1",
+     "evidence_ids": [
+      "PUMP-01@2026-01-14T12:00:00Z",
+      "PUMP-01@2026-01-14T12:05:00Z",
+      "PUMP-01@2026-01-14T12:10:00Z",
+      "PUMP-01@2026-01-14T12:15:00Z",
+      "PUMP-01@2026-01-14T12:20:00Z",
+      "PUMP-01@2026-01-14T12:25:00Z",
+      "PUMP-01@2026-01-14T12:30:00Z",
+      "PUMP-01@2026-01-14T12:35:00Z"
+     ],
+     "first_evidence_ts": "2026-01-14T12:00:00Z",
+     "inferred": {
+      "concern_posterior": 0.43786220218931093,
+      "meaning": "triage-priority index; does not establish cause or intent",
+      "provenance": "expert-specified example probabilities; not learned; not from the article"
+     },
+     "kind": "detection",
+     "observed": {
+      "peak_abs_z_by_sensor": {
+       "flow": 26.828142496500284,
+       "pressure": 1.183561444698664
+      },
+      "window_missing_fraction_max": 0.0
+     },
+     "peak_score": 0.6165959984250479,
+     "reason": "detector score at or above the budget threshold on 8 consecutive-ish observation(s)",
+     "recommended_action": "review_requested",
+     "review": {
+      "decided_at": "2026-01-14T13:30:00Z",
+      "decision": "benign_maintenance_confirmed",
+      "note": "matches planned window MW-1",
+      "review_latency_min": 90.0,
+      "reviewer_id": "analyst-01 (simulated, fictional)",
+      "valid": true
+     }
+    },
+    {
+     "alert_ts": "2026-01-14T13:10:00Z",
+     "asset_id": "PUMP-01",
+     "bayes_version": "bayes-example-v1",
+     "case_id": "CASE-df72195af877",
+     "context": {
+      "corroborated_by_other_asset": false,
+      "criticality": "high",
+      "maintenance_window_id": "MW-1"
+     },
+     "corroborating_evidence_ids": [],
+     "created_at": "2026-01-14T13:10:00Z",
+     "detector_version": "iforest-v1",
+     "evidence_ids": [
+      "PUMP-01@2026-01-14T13:10:00Z",
+      "PUMP-01@2026-01-14T13:15:00Z",
+      "PUMP-01@2026-01-14T13:30:00Z",
+      "PUMP-01@2026-01-14T13:35:00Z"
+     ],
+     "first_evidence_ts": "2026-01-14T13:10:00Z",
+     "inferred": {
+      "concern_posterior": 0.43786220218931093,
+      "meaning": "triage-priority index; does not establish cause or intent",
+      "provenance": "expert-specified example probabilities; not learned; not from the article"
+     },
+     "kind": "detection",
+     "observed": {
+      "peak_abs_z_by_sensor": {
+       "flow": 25.944579544042618,
+       "pressure": 1.7180183502498783
+      },
+      "window_missing_fraction_max": 0.0
+     },
+     "peak_score": 0.6059541515457435,
+     "reason": "detector score at or above the budget threshold on 4 consecutive-ish observation(s)",
+     "recommended_action": "review_requested",
+     "review": {
+      "decided_at": "2026-01-14T13:30:00Z",
+      "decision": "benign_maintenance_confirmed",
+      "note": "matches planned window MW-1",
+      "review_latency_min": 20.0,
+      "reviewer_id": "analyst-01 (simulated, fictional)",
+      "valid": true
+     }
+    },
+    {
+     "alert_ts": "2026-01-14T14:10:00Z",
+     "asset_id": "PUMP-01",
+     "bayes_version": "bayes-example-v1",
+     "case_id": "CASE-be70ceebaece",
+     "context": {
+      "corroborated_by_other_asset": false,
+      "criticality": "high",
+      "maintenance_window_id": "MW-1"
+     },
+     "corroborating_evidence_ids": [],
+     "created_at": "2026-01-14T14:10:00Z",
+     "detector_version": "iforest-v1",
+     "evidence_ids": [
+      "PUMP-01@2026-01-14T14:10:00Z",
+      "PUMP-01@2026-01-14T14:15:00Z",
+      "PUMP-01@2026-01-14T14:20:00Z",
+      "PUMP-01@2026-01-14T14:25:00Z",
+      "PUMP-01@2026-01-14T14:45:00Z",
+      "PUMP-01@2026-01-14T14:50:00Z",
+      "PUMP-01@2026-01-14T14:55:00Z",
+      "PUMP-01@2026-01-14T15:00:00Z",
+      "PUMP-01@2026-01-14T15:20:00Z"
+     ],
+     "first_evidence_ts": "2026-01-14T14:10:00Z",
+     "inferred": {
+      "concern_posterior": 0.43786220218931093,
+      "meaning": "triage-priority index; does not establish cause or intent",
+      "provenance": "expert-specified example probabilities; not learned; not from the article"
+     },
+     "kind": "detection",
+     "observed": {
+      "peak_abs_z_by_sensor": {
+       "flow": 2.4788815234666832,
+       "pressure": 2.241691762120363
+      },
+      "window_missing_fraction_max": 0.0
+     },
+     "peak_score": 0.6304334466228683,
+     "reason": "detector score at or above the budget threshold on 9 consecutive-ish observation(s)",
+     "recommended_action": "review_requested",
+     "review": {
+      "decided_at": "2026-01-14T13:30:00Z",
+      "decision": "benign_maintenance_confirmed",
+      "note": "matches planned window MW-1",
+      "review_latency_min": null,
+      "reviewer_id": "analyst-01 (simulated, fictional)",
+      "valid": false
+     }
+    }
+   ],
+   "outcome": "alert_and_case",
+   "peak_score_in_window": 0.6165959984250479,
+   "rows_at_or_above_threshold": 16,
+   "threshold": 0.5687744979936368,
+   "timeline": [
+    {
+     "alert_ts": "2026-01-14T12:00:00Z",
+     "case_created_at": "2026-01-14T12:00:00Z",
+     "case_id": "CASE-6a23444795a5",
+     "first_evidence_ts": "2026-01-14T12:00:00Z",
+     "review_decided_at": "2026-01-14T13:30:00Z",
+     "review_latency_min": 90.0
+    },
+    {
+     "alert_ts": "2026-01-14T13:10:00Z",
+     "case_created_at": "2026-01-14T13:10:00Z",
+     "case_id": "CASE-df72195af877",
+     "first_evidence_ts": "2026-01-14T13:10:00Z",
+     "review_decided_at": "2026-01-14T13:30:00Z",
+     "review_latency_min": 20.0
+    },
+    {
+     "alert_ts": "2026-01-14T14:10:00Z",
+     "case_created_at": "2026-01-14T14:10:00Z",
+     "case_id": "CASE-be70ceebaece",
+     "first_evidence_ts": "2026-01-14T14:10:00Z",
+     "review_decided_at": "2026-01-14T13:30:00Z",
+     "review_latency_min": null
+    }
+   ]
+  },
+  "rule": {
+   "cases": [
+    {
+     "alert_ts": "2026-01-14T12:05:00Z",
+     "asset_id": "PUMP-01",
+     "bayes_version": "bayes-example-v1",
+     "case_id": "CASE-5cd558cc4aa4",
+     "context": {
+      "corroborated_by_other_asset": false,
+      "criticality": "high",
+      "maintenance_window_id": "MW-1"
+     },
+     "corroborating_evidence_ids": [],
+     "created_at": "2026-01-14T12:05:00Z",
+     "detector_version": "rule-v1",
+     "evidence_ids": [
+      "PUMP-01@2026-01-14T12:05:00Z",
+      "PUMP-01@2026-01-14T12:10:00Z",
+      "PUMP-01@2026-01-14T12:15:00Z",
+      "PUMP-01@2026-01-14T12:20:00Z",
+      "PUMP-01@2026-01-14T12:25:00Z",
+      "PUMP-01@2026-01-14T12:30:00Z",
+      "PUMP-01@2026-01-14T12:35:00Z",
+      "PUMP-01@2026-01-14T12:40:00Z",
+      "PUMP-01@2026-01-14T12:45:00Z",
+      "PUMP-01@2026-01-14T12:50:00Z",
+      "PUMP-01@2026-01-14T12:55:00Z",
+      "PUMP-01@2026-01-14T13:00:00Z",
+      "PUMP-01@2026-01-14T13:05:00Z",
+      "PUMP-01@2026-01-14T13:10:00Z",
+      "PUMP-01@2026-01-14T13:15:00Z",
+      "PUMP-01@2026-01-14T13:20:00Z",
+      "PUMP-01@2026-01-14T13:25:00Z",
+      "PUMP-01@2026-01-14T13:30:00Z",
+      "PUMP-01@2026-01-14T13:35:00Z",
+      "PUMP-01@2026-01-14T13:40:00Z",
+      "PUMP-01@2026-01-14T13:45:00Z",
+      "PUMP-01@2026-01-14T13:50:00Z",
+      "PUMP-01@2026-01-14T13:55:00Z",
+      "PUMP-01@2026-01-14T14:00:00Z",
+      "PUMP-01@2026-01-14T14:05:00Z"
+     ],
+     "first_evidence_ts": "2026-01-14T12:05:00Z",
+     "inferred": {
+      "concern_posterior": 0.43786220218931093,
+      "meaning": "triage-priority index; does not establish cause or intent",
+      "provenance": "expert-specified example probabilities; not learned; not from the article"
+     },
+     "kind": "detection",
+     "observed": {
+      "peak_abs_z_by_sensor": {
+       "flow": 27.277853835684965,
+       "pressure": 1.7180183502498783
+      },
+      "window_missing_fraction_max": 0.0
+     },
+     "peak_score": 26.607868525504657,
+     "reason": "detector score at or above the budget threshold on 25 consecutive-ish observation(s)",
+     "recommended_action": "review_requested",
+     "review": {
+      "decided_at": "2026-01-14T13:30:00Z",
+      "decision": "benign_maintenance_confirmed",
+      "note": "matches planned window MW-1",
+      "review_latency_min": 85.0,
+      "reviewer_id": "analyst-01 (simulated, fictional)",
+      "valid": true
+     }
+    }
+   ],
+   "outcome": "alert_and_case",
+   "peak_score_in_window": 26.607868525504657,
+   "rows_at_or_above_threshold": 25,
+   "threshold": 2.4251603924136687,
+   "timeline": [
+    {
+     "alert_ts": "2026-01-14T12:05:00Z",
+     "case_created_at": "2026-01-14T12:05:00Z",
+     "case_id": "CASE-5cd558cc4aa4",
+     "first_evidence_ts": "2026-01-14T12:05:00Z",
+     "review_decided_at": "2026-01-14T13:30:00Z",
+     "review_latency_min": 85.0
+    }
+   ]
+  }
+ },
+ "example": "2_scheduled_maintenance",
+ "expected_rows_in_window": 64,
+ "recorded_observation_count_in_window": 64,
+ "recorded_observations_sample": [
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T11:50:00Z",
+   "value": 99.023
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T11:55:00Z",
+   "value": 99.462
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T12:00:00Z",
+   "value": 28.852
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T12:05:00Z",
+   "value": 27.539
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T12:10:00Z",
+   "value": 25.305
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T12:15:00Z",
+   "value": 23.977
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T12:20:00Z",
+   "value": 26.304
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T12:25:00Z",
+   "value": 29.832
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T12:30:00Z",
+   "value": 28.532
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T12:35:00Z",
+   "value": 25.553
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T12:40:00Z",
+   "value": 28.439
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T12:45:00Z",
+   "value": 26.193
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T12:50:00Z",
+   "value": 24.602
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T12:55:00Z",
+   "value": 22.701
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T13:00:00Z",
+   "value": 26.349
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T13:05:00Z",
+   "value": 27.092
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T13:10:00Z",
+   "value": 30.468
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T13:15:00Z",
+   "value": 30.968
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T13:20:00Z",
+   "value": 29.522
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T13:25:00Z",
+   "value": 26.637
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T13:30:00Z",
+   "value": 26.691
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T13:35:00Z",
+   "value": 26.484
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T13:40:00Z",
+   "value": 25.794
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T13:45:00Z",
+   "value": 24.271
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T13:50:00Z",
+   "value": 27.032
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T13:55:00Z",
+   "value": 26.894
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T14:00:00Z",
+   "value": 27.63
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T14:05:00Z",
+   "value": 26.113
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T14:10:00Z",
+   "value": 96.504
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T14:15:00Z",
+   "value": 96.519
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T14:20:00Z",
+   "value": 94.301
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "flow",
+   "ts": "2026-01-14T14:25:00Z",
+   "value": 93.151
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T11:50:00Z",
+   "value": 48.734
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T11:55:00Z",
+   "value": 49.4
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T12:00:00Z",
+   "value": 48.854
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T12:05:00Z",
+   "value": 48.266
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T12:10:00Z",
+   "value": 48.227
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T12:15:00Z",
+   "value": 49.526
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T12:20:00Z",
+   "value": 49.316
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T12:25:00Z",
+   "value": 49.817
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T12:30:00Z",
+   "value": 50.628
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T12:35:00Z",
+   "value": 51.117
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T12:40:00Z",
+   "value": 50.3
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T12:45:00Z",
+   "value": 50.328
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T12:50:00Z",
+   "value": 49.909
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T12:55:00Z",
+   "value": 48.728
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T13:00:00Z",
+   "value": 49.791
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T13:05:00Z",
+   "value": 48.38
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T13:10:00Z",
+   "value": 47.434
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T13:15:00Z",
+   "value": 48.385
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T13:20:00Z",
+   "value": 48.553
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T13:25:00Z",
+   "value": 48.924
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T13:30:00Z",
+   "value": 48.382
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T13:35:00Z",
+   "value": 47.452
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T13:40:00Z",
+   "value": 48.824
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T13:45:00Z",
+   "value": 50.004
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T13:50:00Z",
+   "value": 49.156
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T13:55:00Z",
+   "value": 50.511
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T14:00:00Z",
+   "value": 50.607
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T14:05:00Z",
+   "value": 51.268
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T14:10:00Z",
+   "value": 49.846
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T14:15:00Z",
+   "value": 49.427
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T14:20:00Z",
+   "value": 49.966
+  },
+  {
+   "asset_id": "PUMP-01",
+   "sensor": "pressure",
+   "ts": "2026-01-14T14:25:00Z",
+   "value": 48.449
+  }
+ ],
+ "scenario": {
+  "assets": [
+   "PUMP-01"
+  ],
+  "end": "2026-01-14T13:55:00Z",
+  "kind": "maintenance",
+  "scenario_id": "S-M1",
+  "start": "2026-01-14T12:00:00Z"
+ },
+ "why_chosen": "planned window MW-1 makes readings unusual; context must be recorded"
+}

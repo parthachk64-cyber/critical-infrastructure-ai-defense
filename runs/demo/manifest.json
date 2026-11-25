@@ -1,0 +1,31 @@
+{
+ "bayes_provenance": "expert-specified example probabilities; not learned; not from the article",
+ "bayes_version": "bayes-example-v1",
+ "clock_conventions": {
+  "data_clock": "ts in the input files (UTC); used for alerts, time-to-first-alert, review latency",
+  "processing_clock": "time.perf_counter(), only in profiling; never mixed with the data clock"
+ },
+ "config_sha256": "8ba6ba2f17e3a053e54ce3642589c11f25b79976059ee162579f6577adcaad67",
+ "data_files_sha256": {
+  "assets.csv": "dd72db2327419c7209c317602f3a407252a7e8e0545f0998a3b231064635d031",
+  "labels.csv": "ec792ffe9d9a687daef01cf95b4d84a36a1541788b5a9ddf03b48a2a85c821ea",
+  "maintenance.csv": "b0df0e4852d38f781fb63d64eb72874873c2449d66959d5988da352222418872",
+  "readings.csv": "f7076091376882d9e2aa87a34242060abd216c66c6963bfa1f4a03824adf9f86",
+  "reviews.csv": "b84a68616ff51138f5705183daec9a46706a88ed7f65df9dc0c42554d31a8973",
+  "scenarios.csv": "fac2fb217f93522e75b261f08e4689e30a00c82c2f93f760189f6d90148565d0"
+ },
+ "dataset_id": "synthetic-fixtures",
+ "git_commit": "7660dddd25bf3c16f1f028034e159d077c62af18",
+ "machine": "AMD64",
+ "model_sha256": "9631d692a3d462ad6833302ed1ae64585367195f8d059b54f27f49c6eb90f6ef",
+ "model_version": "iforest-v1",
+ "package_version": "0.1.0",
+ "packages": {
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "python": "3.10.11",
+  "scikit-learn": "1.7.2"
+ },
+ "platform": "Windows-10-10.0.26300-SP0",
+ "seed": 42
+}

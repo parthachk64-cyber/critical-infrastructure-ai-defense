@@ -1,0 +1,688 @@
+{
+ "annotation_note": "scenario fields below are evaluation annotations; detectors never receive them",
+ "clock": "data clock (UTC timestamps of the input files). No review wall-clock time exists.",
+ "detectors": {
+  "iforest": {
+   "cases": [
+    {
+     "alert_ts": "2026-01-15T07:10:00Z",
+     "asset_id": "FILTER-04",
+     "bayes_version": "bayes-example-v1",
+     "case_id": "CASE-031ad2e073f6",
+     "context": {
+      "corroborated_by_other_asset": true,
+      "criticality": "low",
+      "maintenance_window_id": null
+     },
+     "corroborating_evidence_ids": [
+      "VALVE-03@2026-01-15T07:10:00Z"
+     ],
+     "created_at": "2026-01-15T07:10:00Z",
+     "detector_version": "iforest-v1",
+     "evidence_ids": [
+      "FILTER-04@2026-01-15T07:10:00Z",
+      "FILTER-04@2026-01-15T07:15:00Z",
+      "FILTER-04@2026-01-15T07:20:00Z",
+      "FILTER-04@2026-01-15T07:30:00Z",
+      "FILTER-04@2026-01-15T07:40:00Z",
+      "FILTER-04@2026-01-15T07:45:00Z",
+      "FILTER-04@2026-01-15T07:55:00Z",
+      "FILTER-04@2026-01-15T08:00:00Z"
+     ],
+     "first_evidence_ts": "2026-01-15T07:10:00Z",
+     "inferred": {
+      "concern_posterior": 0.9836065573770492,
+      "meaning": "triage-priority index; does not establish cause or intent",
+      "provenance": "expert-specified example probabilities; not learned; not from the article"
+     },
+     "kind": "detection",
+     "observed": {
+      "peak_abs_z_by_sensor": {
+       "flow": 4.67608164574829,
+       "pressure": 1.4427327293514758
+      },
+      "window_missing_fraction_max": 0.0
+     },
+     "peak_score": 0.5870706787926814,
+     "reason": "detector score at or above the budget threshold on 8 consecutive-ish observation(s)",
+     "recommended_action": "review_requested",
+     "review": {
+      "decided_at": "2026-01-15T08:50:00Z",
+      "decision": "escalation_recorded",
+      "note": "corroborating deviation; escalation recorded, no cause asserted",
+      "review_latency_min": 100.0,
+      "reviewer_id": "analyst-01 (simulated, fictional)",
+      "valid": true
+     }
+    },
+    {
+     "alert_ts": "2026-01-15T07:10:00Z",
+     "asset_id": "VALVE-03",
+     "bayes_version": "bayes-example-v1",
+     "case_id": "CASE-f8a5af7b128d",
+     "context": {
+      "corroborated_by_other_asset": true,
+      "criticality": "high",
+      "maintenance_window_id": null
+     },
+     "corroborating_evidence_ids": [
+      "FILTER-04@2026-01-15T07:10:00Z"
+     ],
+     "created_at": "2026-01-15T07:10:00Z",
+     "detector_version": "iforest-v1",
+     "evidence_ids": [
+      "VALVE-03@2026-01-15T07:10:00Z",
+      "VALVE-03@2026-01-15T07:15:00Z",
+      "VALVE-03@2026-01-15T07:20:00Z",
+      "VALVE-03@2026-01-15T07:25:00Z",
+      "VALVE-03@2026-01-15T07:30:00Z",
+      "VALVE-03@2026-01-15T07:35:00Z",
+      "VALVE-03@2026-01-15T07:40:00Z",
+      "VALVE-03@2026-01-15T07:45:00Z",
+      "VALVE-03@2026-01-15T07:50:00Z",
+      "VALVE-03@2026-01-15T07:55:00Z",
+      "VALVE-03@2026-01-15T08:00:00Z",
+      "VALVE-03@2026-01-15T08:05:00Z",
+      "VALVE-03@2026-01-15T08:10:00Z",
+      "VALVE-03@2026-01-15T08:15:00Z",
+      "VALVE-03@2026-01-15T08:20:00Z",
+      "VALVE-03@2026-01-15T08:25:00Z",
+      "VALVE-03@2026-01-15T08:40:00Z",
+      "VALVE-03@2026-01-15T08:50:00Z",
+      "VALVE-03@2026-01-15T08:55:00Z",
+      "VALVE-03@2026-01-15T09:00:00Z",
+      "VALVE-03@2026-01-15T09:05:00Z",
+      "VALVE-03@2026-01-15T09:10:00Z",
+      "VALVE-03@2026-01-15T09:15:00Z",
+      "VALVE-03@2026-01-15T09:20:00Z",
+      "VALVE-03@2026-01-15T09:25:00Z",
+      "VALVE-03@2026-01-15T09:30:00Z",
+      "VALVE-03@2026-01-15T09:35:00Z",
+      "VALVE-03@2026-01-15T09:40:00Z"
+     ],
+     "first_evidence_ts": "2026-01-15T07:10:00Z",
+     "inferred": {
+      "concern_posterior": 0.9931840311587147,
+      "meaning": "triage-priority index; does not establish cause or intent",
+      "provenance": "expert-specified example probabilities; not learned; not from the article"
+     },
+     "kind": "detection",
+     "observed": {
+      "peak_abs_z_by_sensor": {
+       "flow": 3.3363519932425665,
+       "pressure": 6.415331107179097
+      },
+      "window_missing_fraction_max": 0.0
+     },
+     "peak_score": 0.6666168256201952,
+     "reason": "detector score at or above the budget threshold on 28 consecutive-ish observation(s)",
+     "recommended_action": "review_requested",
+     "review": {
+      "decided_at": "2026-01-15T08:50:00Z",
+      "decision": "escalation_recorded",
+      "note": "corroborating deviation; escalation recorded, no cause asserted",
+      "review_latency_min": 100.0,
+      "reviewer_id": "analyst-01 (simulated, fictional)",
+      "valid": true
+     }
+    },
+    {
+     "alert_ts": "2026-01-15T08:50:00Z",
+     "asset_id": "FILTER-04",
+     "bayes_version": "bayes-example-v1",
+     "case_id": "CASE-2c9cd43afad1",
+     "context": {
+      "corroborated_by_other_asset": false,
+      "criticality": "low",
+      "maintenance_window_id": null
+     },
+     "corroborating_evidence_ids": [],
+     "created_at": "2026-01-15T08:50:00Z",
+     "detector_version": "iforest-v1",
+     "evidence_ids": [
+      "FILTER-04@2026-01-15T08:50:00Z",
+      "FILTER-04@2026-01-15T08:55:00Z",
+      "FILTER-04@2026-01-15T09:00:00Z",
+      "FILTER-04@2026-01-15T09:25:00Z"
+     ],
+     "first_evidence_ts": "2026-01-15T08:50:00Z",
+     "inferred": {
+      "concern_posterior": 0.5529953917050691,
+      "meaning": "triage-priority index; does not establish cause or intent",
+      "provenance": "expert-specified example probabilities; not learned; not from the article"
+     },
+     "kind": "detection",
+     "observed": {
+      "peak_abs_z_by_sensor": {
+       "flow": 0.6681647408010644,
+       "pressure": 1.9679549192973154
+      },
+      "window_missing_fraction_max": 0.0
+     },
+     "peak_score": 0.6142630089144945,
+     "reason": "detector score at or above the budget threshold on 4 consecutive-ish observation(s)",
+     "recommended_action": "review_requested",
+     "review": {
+      "decided_at": "2026-01-15T08:50:00Z",
+      "decision": "escalation_recorded",
+      "note": "corroborating deviation; escalation recorded, no cause asserted",
+      "review_latency_min": 0.0,
+      "reviewer_id": "analyst-01 (simulated, fictional)",
+      "valid": true
+     }
+    }
+   ],
+   "outcome": "alert_and_case",
+   "peak_score_in_window": 0.6666168256201952,
+   "rows_at_or_above_threshold": 32,
+   "threshold": 0.5687744979936368,
+   "timeline": [
+    {
+     "alert_ts": "2026-01-15T07:10:00Z",
+     "case_created_at": "2026-01-15T07:10:00Z",
+     "case_id": "CASE-031ad2e073f6",
+     "first_evidence_ts": "2026-01-15T07:10:00Z",
+     "review_decided_at": "2026-01-15T08:50:00Z",
+     "review_latency_min": 100.0
+    },
+    {
+     "alert_ts": "2026-01-15T07:10:00Z",
+     "case_created_at": "2026-01-15T07:10:00Z",
+     "case_id": "CASE-f8a5af7b128d",
+     "first_evidence_ts": "2026-01-15T07:10:00Z",
+     "review_decided_at": "2026-01-15T08:50:00Z",
+     "review_latency_min": 100.0
+    },
+    {
+     "alert_ts": "2026-01-15T08:50:00Z",
+     "case_created_at": "2026-01-15T08:50:00Z",
+     "case_id": "CASE-2c9cd43afad1",
+     "first_evidence_ts": "2026-01-15T08:50:00Z",
+     "review_decided_at": "2026-01-15T08:50:00Z",
+     "review_latency_min": 0.0
+    }
+   ]
+  },
+  "rule": {
+   "cases": [
+    {
+     "alert_ts": "2026-01-15T07:15:00Z",
+     "asset_id": "FILTER-04",
+     "bayes_version": "bayes-example-v1",
+     "case_id": "CASE-73d74efcd038",
+     "context": {
+      "corroborated_by_other_asset": true,
+      "criticality": "low",
+      "maintenance_window_id": null
+     },
+     "corroborating_evidence_ids": [
+      "VALVE-03@2026-01-15T07:15:00Z"
+     ],
+     "created_at": "2026-01-15T07:15:00Z",
+     "detector_version": "rule-v1",
+     "evidence_ids": [
+      "FILTER-04@2026-01-15T07:15:00Z",
+      "FILTER-04@2026-01-15T07:20:00Z",
+      "FILTER-04@2026-01-15T07:25:00Z",
+      "FILTER-04@2026-01-15T07:30:00Z",
+      "FILTER-04@2026-01-15T07:35:00Z",
+      "FILTER-04@2026-01-15T07:40:00Z",
+      "FILTER-04@2026-01-15T07:45:00Z",
+      "FILTER-04@2026-01-15T07:50:00Z",
+      "FILTER-04@2026-01-15T07:55:00Z",
+      "FILTER-04@2026-01-15T08:00:00Z",
+      "FILTER-04@2026-01-15T08:05:00Z",
+      "FILTER-04@2026-01-15T08:10:00Z",
+      "FILTER-04@2026-01-15T08:15:00Z",
+      "FILTER-04@2026-01-15T08:20:00Z",
+      "FILTER-04@2026-01-15T08:25:00Z",
+      "FILTER-04@2026-01-15T08:30:00Z",
+      "FILTER-04@2026-01-15T08:35:00Z",
+      "FILTER-04@2026-01-15T08:40:00Z",
+      "FILTER-04@2026-01-15T08:45:00Z"
+     ],
+     "first_evidence_ts": "2026-01-15T07:15:00Z",
+     "inferred": {
+      "concern_posterior": 0.9836065573770492,
+      "meaning": "triage-priority index; does not establish cause or intent",
+      "provenance": "expert-specified example probabilities; not learned; not from the article"
+     },
+     "kind": "detection",
+     "observed": {
+      "peak_abs_z_by_sensor": {
+       "flow": 5.9354147313037116,
+       "pressure": 1.9592458778823982
+      },
+      "window_missing_fraction_max": 0.0
+     },
+     "peak_score": 5.913592861179499,
+     "reason": "detector score at or above the budget threshold on 19 consecutive-ish observation(s)",
+     "recommended_action": "review_requested",
+     "review": {
+      "decided_at": "2026-01-15T08:50:00Z",
+      "decision": "escalation_recorded",
+      "note": "corroborating deviation; escalation recorded, no cause asserted",
+      "review_latency_min": 95.0,
+      "reviewer_id": "analyst-01 (simulated, fictional)",
+      "valid": true
+     }
+    },
+    {
+     "alert_ts": "2026-01-15T07:15:00Z",
+     "asset_id": "VALVE-03",
+     "bayes_version": "bayes-example-v1",
+     "case_id": "CASE-4e8c95c28c47",
+     "context": {
+      "corroborated_by_other_asset": true,
+      "criticality": "high",
+      "maintenance_window_id": null
+     },
+     "corroborating_evidence_ids": [
+      "FILTER-04@2026-01-15T07:15:00Z"
+     ],
+     "created_at": "2026-01-15T07:15:00Z",
+     "detector_version": "rule-v1",
+     "evidence_ids": [
+      "VALVE-03@2026-01-15T07:15:00Z",
+      "VALVE-03@2026-01-15T07:20:00Z",
+      "VALVE-03@2026-01-15T07:25:00Z",
+      "VALVE-03@2026-01-15T07:30:00Z",
+      "VALVE-03@2026-01-15T07:35:00Z",
+      "VALVE-03@2026-01-15T07:40:00Z",
+      "VALVE-03@2026-01-15T07:45:00Z",
+      "VALVE-03@2026-01-15T07:50:00Z",
+      "VALVE-03@2026-01-15T07:55:00Z",
+      "VALVE-03@2026-01-15T08:00:00Z",
+      "VALVE-03@2026-01-15T08:05:00Z",
+      "VALVE-03@2026-01-15T08:10:00Z",
+      "VALVE-03@2026-01-15T08:15:00Z",
+      "VALVE-03@2026-01-15T08:20:00Z",
+      "VALVE-03@2026-01-15T08:25:00Z",
+      "VALVE-03@2026-01-15T08:30:00Z",
+      "VALVE-03@2026-01-15T08:35:00Z",
+      "VALVE-03@2026-01-15T08:40:00Z",
+      "VALVE-03@2026-01-15T08:45:00Z",
+      "VALVE-03@2026-01-15T09:10:00Z",
+      "VALVE-03@2026-01-15T09:15:00Z",
+      "VALVE-03@2026-01-15T09:20:00Z"
+     ],
+     "first_evidence_ts": "2026-01-15T07:15:00Z",
+     "inferred": {
+      "concern_posterior": 0.9931840311587147,
+      "meaning": "triage-priority index; does not establish cause or intent",
+      "provenance": "expert-specified example probabilities; not learned; not from the article"
+     },
+     "kind": "detection",
+     "observed": {
+      "peak_abs_z_by_sensor": {
+       "flow": 3.3363519932425665,
+       "pressure": 6.415331107179097
+      },
+      "window_missing_fraction_max": 0.0
+     },
+     "peak_score": 6.203699980488184,
+     "reason": "detector score at or above the budget threshold on 22 consecutive-ish observation(s)",
+     "recommended_action": "review_requested",
+     "review": {
+      "decided_at": "2026-01-15T08:50:00Z",
+      "decision": "escalation_recorded",
+      "note": "corroborating deviation; escalation recorded, no cause asserted",
+      "review_latency_min": 95.0,
+      "reviewer_id": "analyst-01 (simulated, fictional)",
+      "valid": true
+     }
+    }
+   ],
+   "outcome": "alert_and_case",
+   "peak_score_in_window": 6.203699980488184,
+   "rows_at_or_above_threshold": 38,
+   "threshold": 2.4251603924136687,
+   "timeline": [
+    {
+     "alert_ts": "2026-01-15T07:15:00Z",
+     "case_created_at": "2026-01-15T07:15:00Z",
+     "case_id": "CASE-73d74efcd038",
+     "first_evidence_ts": "2026-01-15T07:15:00Z",
+     "review_decided_at": "2026-01-15T08:50:00Z",
+     "review_latency_min": 95.0
+    },
+    {
+     "alert_ts": "2026-01-15T07:15:00Z",
+     "case_created_at": "2026-01-15T07:15:00Z",
+     "case_id": "CASE-4e8c95c28c47",
+     "first_evidence_ts": "2026-01-15T07:15:00Z",
+     "review_decided_at": "2026-01-15T08:50:00Z",
+     "review_latency_min": 95.0
+    }
+   ]
+  }
+ },
+ "example": "3_corroborated_incident",
+ "expected_rows_in_window": 104,
+ "recorded_observation_count_in_window": 104,
+ "recorded_observations_sample": [
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "flow",
+   "ts": "2026-01-15T07:00:00Z",
+   "value": 106.141
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "flow",
+   "ts": "2026-01-15T07:10:00Z",
+   "value": 90.283
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "flow",
+   "ts": "2026-01-15T07:20:00Z",
+   "value": 88.814
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "flow",
+   "ts": "2026-01-15T07:30:00Z",
+   "value": 88.45
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "flow",
+   "ts": "2026-01-15T07:40:00Z",
+   "value": 90.391
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "flow",
+   "ts": "2026-01-15T07:50:00Z",
+   "value": 89.15
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "flow",
+   "ts": "2026-01-15T08:00:00Z",
+   "value": 86.752
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "flow",
+   "ts": "2026-01-15T08:10:00Z",
+   "value": 84.13
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "flow",
+   "ts": "2026-01-15T08:20:00Z",
+   "value": 86.486
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "flow",
+   "ts": "2026-01-15T08:30:00Z",
+   "value": 83.298
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "flow",
+   "ts": "2026-01-15T08:40:00Z",
+   "value": 83.236
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "flow",
+   "ts": "2026-01-15T08:50:00Z",
+   "value": 101.936
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "flow",
+   "ts": "2026-01-15T09:00:00Z",
+   "value": 101.002
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "pressure",
+   "ts": "2026-01-15T07:00:00Z",
+   "value": 50.677
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "pressure",
+   "ts": "2026-01-15T07:10:00Z",
+   "value": 50.691
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "pressure",
+   "ts": "2026-01-15T07:20:00Z",
+   "value": 50.83
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "pressure",
+   "ts": "2026-01-15T07:30:00Z",
+   "value": 50.733
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "pressure",
+   "ts": "2026-01-15T07:40:00Z",
+   "value": 50.357
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "pressure",
+   "ts": "2026-01-15T07:50:00Z",
+   "value": 50.683
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "pressure",
+   "ts": "2026-01-15T08:00:00Z",
+   "value": 50.931
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "pressure",
+   "ts": "2026-01-15T08:10:00Z",
+   "value": 50.972
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "pressure",
+   "ts": "2026-01-15T08:20:00Z",
+   "value": 51.642
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "pressure",
+   "ts": "2026-01-15T08:30:00Z",
+   "value": 52.082
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "pressure",
+   "ts": "2026-01-15T08:40:00Z",
+   "value": 51.165
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "pressure",
+   "ts": "2026-01-15T08:50:00Z",
+   "value": 52.916
+  },
+  {
+   "asset_id": "FILTER-04",
+   "sensor": "pressure",
+   "ts": "2026-01-15T09:00:00Z",
+   "value": 52.488
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "flow",
+   "ts": "2026-01-15T07:00:00Z",
+   "value": 94.807
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "flow",
+   "ts": "2026-01-15T07:10:00Z",
+   "value": 95.036
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "flow",
+   "ts": "2026-01-15T07:20:00Z",
+   "value": 95.148
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "flow",
+   "ts": "2026-01-15T07:30:00Z",
+   "value": 98.521
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "flow",
+   "ts": "2026-01-15T07:40:00Z",
+   "value": 98.522
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "flow",
+   "ts": "2026-01-15T07:50:00Z",
+   "value": 93.944
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "flow",
+   "ts": "2026-01-15T08:00:00Z",
+   "value": 95.203
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "flow",
+   "ts": "2026-01-15T08:10:00Z",
+   "value": 93.107
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "flow",
+   "ts": "2026-01-15T08:20:00Z",
+   "value": 94.49
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "flow",
+   "ts": "2026-01-15T08:30:00Z",
+   "value": 94.98
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "flow",
+   "ts": "2026-01-15T08:40:00Z",
+   "value": 94.936
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "flow",
+   "ts": "2026-01-15T08:50:00Z",
+   "value": 94.711
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "flow",
+   "ts": "2026-01-15T09:00:00Z",
+   "value": 94.145
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "pressure",
+   "ts": "2026-01-15T07:00:00Z",
+   "value": 47.97
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "pressure",
+   "ts": "2026-01-15T07:10:00Z",
+   "value": 56.426
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "pressure",
+   "ts": "2026-01-15T07:20:00Z",
+   "value": 55.95
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "pressure",
+   "ts": "2026-01-15T07:30:00Z",
+   "value": 56.573
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "pressure",
+   "ts": "2026-01-15T07:40:00Z",
+   "value": 57.889
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "pressure",
+   "ts": "2026-01-15T07:50:00Z",
+   "value": 57.636
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "pressure",
+   "ts": "2026-01-15T08:00:00Z",
+   "value": 56.42
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "pressure",
+   "ts": "2026-01-15T08:10:00Z",
+   "value": 58.102
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "pressure",
+   "ts": "2026-01-15T08:20:00Z",
+   "value": 58.723
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "pressure",
+   "ts": "2026-01-15T08:30:00Z",
+   "value": 58.002
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "pressure",
+   "ts": "2026-01-15T08:40:00Z",
+   "value": 56.296
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "pressure",
+   "ts": "2026-01-15T08:50:00Z",
+   "value": 50.32
+  },
+  {
+   "asset_id": "VALVE-03",
+   "sensor": "pressure",
+   "ts": "2026-01-15T09:00:00Z",
+   "value": 49.91
+  }
+ ],
+ "scenario": {
+  "assets": [
+   "VALVE-03",
+   "FILTER-04"
+  ],
+  "end": "2026-01-15T08:35:00Z",
+  "kind": "incident",
+  "scenario_id": "INC-1",
+  "start": "2026-01-15T07:10:00Z"
+ },
+ "why_chosen": "two assets deviate together; warrants analyst review"
+}

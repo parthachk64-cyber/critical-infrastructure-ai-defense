@@ -1,0 +1,501 @@
+{
+ "annotation_note": "scenario fields below are evaluation annotations; detectors never receive them",
+ "clock": "data clock (UTC timestamps of the input files). No review wall-clock time exists.",
+ "detectors": {
+  "iforest": {
+   "cases": [
+    {
+     "alert_ts": "2026-01-14T00:25:00Z",
+     "asset_id": "TANK-02",
+     "bayes_version": null,
+     "case_id": "CASE-d5c38cdec411",
+     "context": {},
+     "corroborating_evidence_ids": [],
+     "created_at": "2026-01-14T00:25:00Z",
+     "detector_version": "iforest-v1",
+     "evidence_ids": [
+      "TANK-02@2026-01-14T00:25:00Z",
+      "TANK-02@2026-01-14T00:30:00Z",
+      "TANK-02@2026-01-14T00:35:00Z",
+      "TANK-02@2026-01-14T00:40:00Z",
+      "TANK-02@2026-01-14T00:45:00Z",
+      "TANK-02@2026-01-14T00:50:00Z",
+      "TANK-02@2026-01-14T00:55:00Z",
+      "TANK-02@2026-01-14T01:00:00Z",
+      "TANK-02@2026-01-14T01:05:00Z",
+      "TANK-02@2026-01-14T01:10:00Z",
+      "TANK-02@2026-01-14T01:15:00Z",
+      "TANK-02@2026-01-14T01:20:00Z",
+      "TANK-02@2026-01-14T01:25:00Z",
+      "TANK-02@2026-01-14T01:30:00Z",
+      "TANK-02@2026-01-14T01:35:00Z",
+      "TANK-02@2026-01-14T01:40:00Z",
+      "TANK-02@2026-01-14T01:45:00Z",
+      "TANK-02@2026-01-14T01:50:00Z",
+      "TANK-02@2026-01-14T01:55:00Z",
+      "TANK-02@2026-01-14T02:00:00Z",
+      "TANK-02@2026-01-14T02:05:00Z",
+      "TANK-02@2026-01-14T02:10:00Z",
+      "TANK-02@2026-01-14T02:15:00Z",
+      "TANK-02@2026-01-14T02:20:00Z",
+      "TANK-02@2026-01-14T02:25:00Z",
+      "TANK-02@2026-01-14T02:30:00Z",
+      "TANK-02@2026-01-14T02:35:00Z",
+      "TANK-02@2026-01-14T02:40:00Z",
+      "TANK-02@2026-01-14T02:45:00Z",
+      "TANK-02@2026-01-14T02:50:00Z",
+      "TANK-02@2026-01-14T02:55:00Z",
+      "TANK-02@2026-01-14T03:00:00Z",
+      "TANK-02@2026-01-14T03:05:00Z",
+      "TANK-02@2026-01-14T03:10:00Z",
+      "TANK-02@2026-01-14T03:15:00Z",
+      "TANK-02@2026-01-14T03:20:00Z",
+      "TANK-02@2026-01-14T03:25:00Z"
+     ],
+     "first_evidence_ts": "2026-01-14T00:25:00Z",
+     "inferred": null,
+     "kind": "data_quality",
+     "observed": {
+      "window_missing_fraction_max": 0.5
+     },
+     "peak_score": 0.5,
+     "reason": "window missing fraction >= 0.25: telemetry gap, anomaly scores for this asset are less reliable",
+     "recommended_action": "telemetry_quality_check",
+     "review": {
+      "decided_at": "2026-01-14T01:20:00Z",
+      "decision": "telemetry_quality_check",
+      "note": "sensor reading absent; quality check requested",
+      "review_latency_min": 55.0,
+      "reviewer_id": "analyst-01 (simulated, fictional)",
+      "valid": true
+     }
+    }
+   ],
+   "outcome": "alert_and_case",
+   "peak_score_in_window": 0.49764057512215376,
+   "rows_at_or_above_threshold": 0,
+   "threshold": 0.5687744979936368,
+   "timeline": [
+    {
+     "alert_ts": "2026-01-14T00:25:00Z",
+     "case_created_at": "2026-01-14T00:25:00Z",
+     "case_id": "CASE-d5c38cdec411",
+     "first_evidence_ts": "2026-01-14T00:25:00Z",
+     "review_decided_at": "2026-01-14T01:20:00Z",
+     "review_latency_min": 55.0
+    }
+   ]
+  },
+  "rule": {
+   "cases": [
+    {
+     "alert_ts": "2026-01-14T00:25:00Z",
+     "asset_id": "TANK-02",
+     "bayes_version": null,
+     "case_id": "CASE-ec7e4ca044d9",
+     "context": {},
+     "corroborating_evidence_ids": [],
+     "created_at": "2026-01-14T00:25:00Z",
+     "detector_version": "rule-v1",
+     "evidence_ids": [
+      "TANK-02@2026-01-14T00:25:00Z",
+      "TANK-02@2026-01-14T00:30:00Z",
+      "TANK-02@2026-01-14T00:35:00Z",
+      "TANK-02@2026-01-14T00:40:00Z",
+      "TANK-02@2026-01-14T00:45:00Z",
+      "TANK-02@2026-01-14T00:50:00Z",
+      "TANK-02@2026-01-14T00:55:00Z",
+      "TANK-02@2026-01-14T01:00:00Z",
+      "TANK-02@2026-01-14T01:05:00Z",
+      "TANK-02@2026-01-14T01:10:00Z",
+      "TANK-02@2026-01-14T01:15:00Z",
+      "TANK-02@2026-01-14T01:20:00Z",
+      "TANK-02@2026-01-14T01:25:00Z",
+      "TANK-02@2026-01-14T01:30:00Z",
+      "TANK-02@2026-01-14T01:35:00Z",
+      "TANK-02@2026-01-14T01:40:00Z",
+      "TANK-02@2026-01-14T01:45:00Z",
+      "TANK-02@2026-01-14T01:50:00Z",
+      "TANK-02@2026-01-14T01:55:00Z",
+      "TANK-02@2026-01-14T02:00:00Z",
+      "TANK-02@2026-01-14T02:05:00Z",
+      "TANK-02@2026-01-14T02:10:00Z",
+      "TANK-02@2026-01-14T02:15:00Z",
+      "TANK-02@2026-01-14T02:20:00Z",
+      "TANK-02@2026-01-14T02:25:00Z",
+      "TANK-02@2026-01-14T02:30:00Z",
+      "TANK-02@2026-01-14T02:35:00Z",
+      "TANK-02@2026-01-14T02:40:00Z",
+      "TANK-02@2026-01-14T02:45:00Z",
+      "TANK-02@2026-01-14T02:50:00Z",
+      "TANK-02@2026-01-14T02:55:00Z",
+      "TANK-02@2026-01-14T03:00:00Z",
+      "TANK-02@2026-01-14T03:05:00Z",
+      "TANK-02@2026-01-14T03:10:00Z",
+      "TANK-02@2026-01-14T03:15:00Z",
+      "TANK-02@2026-01-14T03:20:00Z",
+      "TANK-02@2026-01-14T03:25:00Z"
+     ],
+     "first_evidence_ts": "2026-01-14T00:25:00Z",
+     "inferred": null,
+     "kind": "data_quality",
+     "observed": {
+      "window_missing_fraction_max": 0.5
+     },
+     "peak_score": 0.5,
+     "reason": "window missing fraction >= 0.25: telemetry gap, anomaly scores for this asset are less reliable",
+     "recommended_action": "telemetry_quality_check",
+     "review": {
+      "decided_at": "2026-01-14T01:20:00Z",
+      "decision": "telemetry_quality_check",
+      "note": "sensor reading absent; quality check requested",
+      "review_latency_min": 55.0,
+      "reviewer_id": "analyst-01 (simulated, fictional)",
+      "valid": true
+     }
+    }
+   ],
+   "outcome": "alert_and_case",
+   "peak_score_in_window": 1.0576766757075,
+   "rows_at_or_above_threshold": 0,
+   "threshold": 2.4251603924136687,
+   "timeline": [
+    {
+     "alert_ts": "2026-01-14T00:25:00Z",
+     "case_created_at": "2026-01-14T00:25:00Z",
+     "case_id": "CASE-ec7e4ca044d9",
+     "first_evidence_ts": "2026-01-14T00:25:00Z",
+     "review_decided_at": "2026-01-14T01:20:00Z",
+     "review_latency_min": 55.0
+    }
+   ]
+  }
+ },
+ "example": "4_missing_sensor",
+ "expected_rows_in_window": 88,
+ "recorded_observation_count_in_window": 52,
+ "recorded_observations_sample": [
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T23:50:00Z",
+   "value": 97.431
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-13T23:55:00Z",
+   "value": 97.342
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T00:00:00Z",
+   "value": 97.362
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T00:05:00Z",
+   "value": 100.184
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T00:10:00Z",
+   "value": 99.5
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T00:15:00Z",
+   "value": 99.273
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T00:20:00Z",
+   "value": 101.304
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T00:25:00Z",
+   "value": 100.582
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T00:30:00Z",
+   "value": 101.155
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T00:35:00Z",
+   "value": 101.334
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T00:40:00Z",
+   "value": 98.788
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T00:45:00Z",
+   "value": 97.482
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T00:50:00Z",
+   "value": 100.923
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T00:55:00Z",
+   "value": 103.552
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T01:00:00Z",
+   "value": 102.886
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T01:05:00Z",
+   "value": 103.363
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T01:10:00Z",
+   "value": 105.404
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T01:15:00Z",
+   "value": 101.809
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T01:20:00Z",
+   "value": 103.315
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T01:25:00Z",
+   "value": 101.598
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T01:30:00Z",
+   "value": 99.789
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T01:35:00Z",
+   "value": 100.666
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T01:40:00Z",
+   "value": 100.283
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T01:45:00Z",
+   "value": 98.639
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T01:50:00Z",
+   "value": 100.846
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T01:55:00Z",
+   "value": 99.999
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T02:00:00Z",
+   "value": 101.323
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T02:05:00Z",
+   "value": 102.849
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T02:10:00Z",
+   "value": 102.948
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T02:15:00Z",
+   "value": 101.807
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T02:20:00Z",
+   "value": 101.285
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T02:25:00Z",
+   "value": 100.126
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T02:30:00Z",
+   "value": 103.073
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T02:35:00Z",
+   "value": 101.072
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T02:40:00Z",
+   "value": 101.386
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T02:45:00Z",
+   "value": 100.335
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T02:50:00Z",
+   "value": 100.543
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T02:55:00Z",
+   "value": 100.475
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T03:00:00Z",
+   "value": 100.35
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T03:05:00Z",
+   "value": 99.626
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T03:10:00Z",
+   "value": 100.83
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T03:15:00Z",
+   "value": 99.484
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T03:20:00Z",
+   "value": 102.088
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "flow",
+   "ts": "2026-01-14T03:25:00Z",
+   "value": 102.681
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T23:50:00Z",
+   "value": 50.171
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-13T23:55:00Z",
+   "value": 49.767
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-14T03:00:00Z",
+   "value": 50.076
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-14T03:05:00Z",
+   "value": 50.859
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-14T03:10:00Z",
+   "value": 50.446
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-14T03:15:00Z",
+   "value": 50.014
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-14T03:20:00Z",
+   "value": 49.786
+  },
+  {
+   "asset_id": "TANK-02",
+   "sensor": "pressure",
+   "ts": "2026-01-14T03:25:00Z",
+   "value": 48.809
+  }
+ ],
+ "scenario": {
+  "assets": [
+   "TANK-02"
+  ],
+  "end": "2026-01-14T02:55:00Z",
+  "kind": "data_gap",
+  "scenario_id": "S-D1",
+  "start": "2026-01-14T00:00:00Z"
+ },
+ "why_chosen": "sensor stops reporting; data quality must be surfaced, not hidden"
+}
