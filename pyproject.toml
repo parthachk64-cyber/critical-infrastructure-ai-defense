@@ -36,13 +36,16 @@ addopts = "-q"
 source = ["infra_defense"]
 
 [tool.ruff]
-line-length = 120
+line-length = 140
 target-version = "py310"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B"]
+ignore = ["B905"]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["E501"]
 "src/infra_defense/report.py" = ["E501"]
+"src/infra_defense/evaluation/plots.py" = ["E501"]
 "src/infra_defense/cli.py" = ["E501"]
+"scripts/*" = ["E501"]

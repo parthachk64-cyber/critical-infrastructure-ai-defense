@@ -67,10 +67,9 @@ def results_md(run: Path, traces: list[dict]) -> str:
           "### C3. Traced examples (data clock; see `runs/demo/traces/*.json`)\n",
           "| example | scenario | rule outcome | iforest outcome | what the case records |", "|---|---|---|---|---|"]
     for t in traces:
-        def cell(det):
+        def cell(det, t=t):
             d = t["detectors"][det]
-            cs = d["cases"]
-            return f"{d['outcome']} ({len(cs)} case(s))"
+            return f"{d['outcome']} ({len(d['cases'])} case(s))"
         c0 = next((c for det in ("rule", "iforest") for c in t["detectors"][det]["cases"]), None)
         what = "no case: nothing to record beyond scores" if c0 is None else (
             f"kind={c0['kind']}; maintenance={c0['context'].get('maintenance_window_id')}; "

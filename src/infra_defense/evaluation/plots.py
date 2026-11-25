@@ -120,7 +120,7 @@ def fig_case(p, fitted: dict, trace: dict, out: Path) -> Path:
         ax.axvspan(pd.Timestamp(trace["scenario"]["start"]), pd.Timestamp(trace["scenario"]["end"]), color=GREY, alpha=.15)
         ax.set_ylabel(a, fontsize=8)
     axes[0, 0].set_title(f"{trace['example']}: data-clock timeline (grey = annotated window; solid = alert; dashed green = reviewer decision)\n"
-                         "blue = rule score, orange = Isolation Forest score (dotted = budget thresholds). SYNTHETIC demonstration",
+                         "blue = rule score, orange = Isolation Forest score (dotted = thresholds). SYNTHETIC demo",
                          fontsize=7)
     fig.autofmt_xdate()
     path = Path(out) / "fig_case_trace.png"

@@ -72,7 +72,7 @@ def build_features(readings: pd.DataFrame, baseline: Baseline, window_steps: int
     for s in sensors:
         if s not in wide.columns:
             wide[s] = np.nan
-    parts, absz = [], []
+    parts = []
     for asset, g in wide.groupby(level="asset_id", sort=True):
         g = g.droplevel("asset_id")
         cols: dict[str, pd.Series] = {}
