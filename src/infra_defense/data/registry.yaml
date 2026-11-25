@@ -1,0 +1,23 @@
+# Dataset registry. Provider data is never stored in this repository.
+datasets:
+  - id: article-study-data
+    provider: authors of Das et al. 2026
+    url: https://doi.org/10.1365/s43439-026-00169-5
+    availability_statement: "The dataset used in this study can be publicly accessible and will be available on request."  # verbatim, Springer page
+    status: NOT ACCESSED. "Available on request" does not establish access; authors were not contacted, no registration made.
+    identifiers: none verified
+    version: unverified
+    fields: unverified
+  - id: swat-a1-dec2015
+    provider: iTrust, Singapore University of Technology and Design
+    url: https://www.sutd.edu.sg/itrust/itrust-labs/datasets/dataset-characteristics/swat/
+    access: owner-provided authorized copy; terms are the provider's (see page). Not redistributed here.
+    characteristics_verified_2026_11_25: "11 days: 7 normal + 4 attack-scenario days; 51 sensors and actuators; labelled normal/abnormal; 41 attacks in the 4 days"
+    scope_caveat: Singapore research testbed; not U.S. deployment evidence; not the article's data
+    loader: infra_defense.data.swat.load_swat_csv
+    checksums: "record with `infra-defense data-check --swat FILE...` (sha256 printed; compare to the provider's if published)"
+  - id: synthetic-fixtures
+    provider: this repository (src/infra_defense/data/synthetic.py)
+    path: data/synthetic/
+    seed: 20260325
+    use: software and metric verification only; fictional assets; checksums in data/synthetic/CHECKSUMS.json

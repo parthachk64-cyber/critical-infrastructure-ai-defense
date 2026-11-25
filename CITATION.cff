@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this companion software, please cite it and the article it accompanies."
+title: "infra-defense: offline advisory companion to a review of AI-driven threat detection for U.S. critical infrastructure"
+type: software
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/parthachk64-cyber/critical-infrastructure-ai-defense"
+authors:
+  - family-names: Chakraborty
+    given-names: Partha
+abstract: >-
+  Independent companion software: figure-to-evidence map, synthetic fixtures, rule and Isolation Forest baselines,
+  an illustrative Bayesian risk graph, analyst-review triage and a SWaT loader. It is not the article authors' code,
+  not their trained system, and does not reproduce their figures; see docs/paper-map.md.
+preferred-citation:
+  type: article
+  title: "AI-driven threat detection and response framework for protecting U.S. critical infrastructure from cyberattacks"
+  authors:
+    - {family-names: Das, given-names: Niropam}
+    - {family-names: Kaur, given-names: Harleen}
+    - {family-names: Siddiqa, given-names: Kazi Bushra}
+    - {family-names: Hasan, given-names: Syed Nazmul}
+    - {family-names: Chakraborty, given-names: Partha}
+    - {family-names: kaur, given-names: Jobanpreet}
+    - {family-names: Rahman, given-names: Habiba}
+    - {family-names: Shan-A-Alahi, given-names: Ahmed}
+    - {family-names: Hasan, given-names: Rakibul}
+  journal: "International Cybersecurity Law Review"
+  volume: 7
+  start: 147
+  end: 163
+  year: 2026
+  date-published: 2026-03-09
+  doi: 10.1365/s43439-026-00169-5
+  url: "https://link.springer.com/article/10.1365/s43439-026-00169-5"

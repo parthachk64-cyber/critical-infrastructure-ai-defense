@@ -1,0 +1,5 @@
+asset_id,criticality,stage
+PUMP-01,high,1
+TANK-02,low,1
+VALVE-03,high,2
+FILTER-04,low,2

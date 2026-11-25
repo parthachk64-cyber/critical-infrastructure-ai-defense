@@ -1,0 +1,17 @@
+# Origin of every value here: COMPANION DESIGN CHOICE (not taken from the article).
+step_minutes: 5                 # regular sampling grid of the observation stream
+window_steps: 12                # rolling window = 12 x 5 min = 1 h, past data only (includes current row)
+delta_steps: 3                  # rate-of-change lag
+splits:                         # chronological, by days from stream start
+  train_days: 5
+  dev_days: 2                   # days 5-7; test = everything after day 7
+alert_budget_rate: 0.01         # fraction of NORMAL development rows allowed above threshold
+alert_merge_gap_minutes: 30     # consecutive alert rows closer than this form one alert group
+match_grace_minutes: 30         # alert may fall up to this long after labeled incident end
+corroboration_minutes: 30       # alert groups on different assets this close corroborate each other
+missing_fraction_quality_case: 0.25
+rule_persistence_steps: 2       # rule score = min over last N steps of max |z|
+isolation_forest: {n_estimators: 200, seed: 42}
+detector_versions: {rule: rule-v1, iforest: iforest-v1}
+profiling: {batch_sizes: [1, 256, 0], warmup_runs: 2, repeats: 5}   # 0 = whole test set
+bayes_example_version: bayes-example-v1
